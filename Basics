@@ -1,0 +1,24 @@
+package com.practice;
+
+import java.util.Scanner;
+
+public class Inputfromuser {
+
+    public static void main(String[] args) {
+
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println("what is ur name");
+        String name = scanner.nextLine();
+
+        System.out.println("Am feeling happy to meet you");
+        String feel = scanner.nextLine();
+
+        System.out.println("By the way whats the date today?");
+        int date = scanner.nextInt();
+
+        System.out.println("Thankyou,nd hv a nice day!");
+
+        scanner.close();
+    }
+}
