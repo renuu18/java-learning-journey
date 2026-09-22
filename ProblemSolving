@@ -1,0 +1,90 @@
+import java.util.*;
+
+public class NumberPrograms {
+
+    public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+
+        // 1. Unique Number
+        System.out.print("Enter a number for Unique Number: ");
+        int n = sc.nextInt();
+
+        boolean unique = true;
+
+        for (int i = 0; i <= 9; i++) {
+
+            int temp = n;
+            int count = 0;
+
+            while (temp != 0) {
+
+                int digit = temp % 10;
+
+                if (digit == i) {
+                    count++;
+                }
+
+                temp = temp / 10;
+            }
+
+            if (count > 1) {
+                unique = false;
+            }
+        }
+
+        if (unique) {
+            System.out.println("Unique number");
+        } else {
+            System.out.println("Not a unique number");
+        }
+
+
+        // 2. Sunny Number
+        System.out.print("\nEnter a number for Sunny Number: ");
+        int num1 = sc.nextInt();
+
+        int num = num1 + 1;
+        boolean sunny = false;
+
+        for (int i = 1; i * i <= num; i++) {
+
+            if (i * i == num) {
+                sunny = true;
+                break;
+            }
+        }
+
+        if (sunny) {
+            System.out.println("Sunny number");
+        } else {
+            System.out.println("Not a sunny number");
+        }
+
+
+        // 3. Duck Number
+        System.out.print("\nEnter a number for Duck Number: ");
+        int num2 = sc.nextInt();
+
+        int temp = num2;
+        boolean duck = false;
+
+        while (temp != 0) {
+
+            int d = temp % 10;
+
+            if (d == 0) {
+                duck = true;
+                break;
+            }
+
+            temp = temp / 10;
+        }
+
+        if (duck) {
+            System.out.println("Duck number");
+        } else {
+            System.out.println("Not a Duck number");
+        }
+    }
+}
